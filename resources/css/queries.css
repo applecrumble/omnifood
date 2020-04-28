@@ -1,0 +1,155 @@
+/*-------------------------------------- */
+/*------RESPONSIVE MEDIA QUERIES-------- */
+/*-------------------------------------- */
+
+
+/* Big tablet to 1200px: width smaller than 1140px */
+@media only screen and (max-width: 1200px) {
+
+	.hero-text-box { 
+		width: 100%;  /* making text fit when we resize the browser window to less than 1140px */
+		padding: 0 2%; /* add some space between the text and the borders of the browser */
+	}
+	.row  {	padding: 0 2%; } /* add some space between logo/menu and the borders of the browser */
+}
+
+
+
+/* Small tablet to big tablet and iPad in portrait view: from 768 px to 1023px */
+@media only screen and (max-width: 1023px) {
+
+	body { font-size: 18px; }   /* decrease all font sizes */
+	section { padding: 60px 0; }  /* make less space between all sections and the borders of the browser */
+
+	.long-copy {
+		width: 80%;             /* make it wider */
+		margin-left: 10%;       /* (100-80)/2=10 */
+	}
+
+	.steps-box { margin-top: 10px; }  /* decrease */
+	.steps-box:last-child  { margin-top: 10px; }  /* decrease */
+
+	.works-step { margin-bottom: 40px; } /* decrease */
+	.works-step:last-of-type { margin-bottom: 60px; }  /* decrease */
+
+	.app-screen { width: 50%; }  /* increase from 40 */
+
+	.icon-small { 
+		width: 17px;
+		margin-right: 5px;
+		 } /* decrease */
+
+	.city-feature { font-size: 90%; } /* decrease */
+
+	.plan-box {
+		width: 100%; /* increase */
+		margin-left: 0%;
+	}
+
+	.plan-price {
+		font-size: 250%; /* decrease */
+	}
+
+	.contact-form { width: 90%; } 
+} 
+
+
+
+/* Larger phones and tablets smaller than the iPad: from 481 px to 767px */
+@media only screen and (max-width: 767px) {
+	body { font-size: 16px; } /* decrease */
+	section { padding: 30px 0; } /* decrease */
+
+	.row,
+	.hero-text-box  { padding: 0 4%; } /* add some space between logo/menu and the borders of the browser */
+
+	.col { 
+		width: 100%; /* make your columns stack one on top of another instead of lining up side by side */
+		margin: 0 0 4% 0;  /* make your columns stack one on top of another without shifting to the side */
+	 } 
+
+	.main-nav { display: none; }  /*hide the navigation */
+
+	.mobile-nav-icon { display: inline-block; }
+
+	.main-nav {
+		float: left;   /* to switch places of rge mobile button and menu */
+		margin-top: 35px;
+		margin-left: 25px;
+	}
+
+	.main-nav li { display: block; } /* forcing the break line, making menu elements stack one on top of another */
+
+	.main-nav li a:link,
+	.main-nav li a:visited {
+		display: block;
+		border: 0;  /* on mobile we can't hover so we don't need that orange border  */
+		padding: 10px 0;
+		font-size: 100%;
+	}
+
+	.sticky .main-nav { margin-top: 10px; }
+
+	.sticky .main-nav li a:link,             /* these styles apply only if main-nav is inside sticky class*/
+	.sticky .main-nav li a:visited  { padding: 10px 0; }
+	.sticky .mobile-nav-icon { margin-top: 10px; }
+	.sticky .mobile-nav-icon i { color: #555; }
+
+
+
+	.long-copy {
+		width: 100%;           /* make it as wide as possible */
+		margin-left: 0%;       /* no margin left */
+	}
+
+	h1 { font-size: 180%; }
+	h2 { font-size: 150%; }
+
+	.works-step { margin-bottom: 20px; } /* decrease */
+	.works-step:last-of-type { margin-bottom: 20px; }  /* decrease */
+
+	.works-step div {                /* making circled numbers smaller*/
+		height: 40px;
+		width: 40px;
+		margin-right: 15px;
+		padding: 4px;
+		font-size: 120%;
+	}
+
+	.steps-box:first-child {    /* placing iPhone image at the center*/
+		text-align: center;
+	}
+
+	.app-screen { width: 40%; }  /* decrease or leave the same*/
+
+	.map-box {                          /*  a box containing both the map and the form */
+		width: 100%;
+		height: auto;
+		position: relative;             /*  position father element as relative to position child as absolute */
+	}
+
+	.map {                              /*  map itself */
+		width: 100%;
+		height: 300px;
+		position: relative;             /*  necessary to make z-index work */
+		z-index: 0;
+	}
+
+	.form-box {                         /*  form itself */
+		position: relative;
+		width: 100%;                     /*  all screen to stack on one another */
+		height: auto;
+		padding: 30px 0;
+	}
+}
+
+
+
+
+/* Small phones: from 0 to 480px like iPhone 4 or 5 */
+@media only screen and (max-width: 480px) {
+
+	section { padding: 25px 0; }        /* decrease */
+	.contact-form { width: 100%; }      /* make it as wide as possible */
+	
+}
