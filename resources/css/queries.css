@@ -10,7 +10,7 @@
 		width: 100%;  /* making text fit when we resize the browser window to less than 1140px */
 		padding: 0 2%; /* add some space between the text and the borders of the browser */
 	}
-	.row  {	padding: 0 2%; } /* add some space between logo/menu and the borders of the browser */
+	.row  {	padding: 0 2%; } /* add some space between logo-menu and the borders of the browser */
 }
 
 
